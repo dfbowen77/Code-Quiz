@@ -1,4 +1,45 @@
-var timerEl = document.querySelector('h2')
+var timerEl = document.querySelector('.timer')
+
+// questions were copied from the following website: https://www.interviewbit.com/javascript-mcq/
+var questions =
+      [
+        {
+            question_id: 1,
+            prompt: "What does the Javascript 'debugger' statement do?",
+            distractors: ["It will debug all the errors in the program at runtime.","It acts as a breakpoint in a program.","It will debug error in the current statement if any.","All of the above."],
+            key: 1
+        },
+
+        {
+            question_id: 2,
+            prompt: "Javascript is an ______________ language",
+            distractors: ["Object-Oriented","Object-Based","Procedural","None of the Above"],
+            key: 0
+        },
+
+        {
+            question_id: 3,
+            prompt: "Which of the following keywords is used to define a variable in Javascript?",
+            distractors: ["var","let","Both A and B","None of the Above"],
+            key: 2
+        },
+
+        {
+            question_id: 4,
+            prompt: "Which of the following methods can be used to display data in some form using Javascript?",
+            distractors: ["document.write()","console.log()","window.alert()","All of the above"],
+            key: 3
+        },
+
+        {
+            question_id: 5,
+            prompt: "How can a datatype be declared to be a constant type?",
+            distractors: ["const","var","let","constant"],
+            key: 0
+        }
+
+
+      ];
 
 console.log(timerEl)
 function timer() {

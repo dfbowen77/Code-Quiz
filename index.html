@@ -9,8 +9,20 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-    <h2 id="timer">Testing... 1, 2, 3? </h2>
-    
+    <header class="code-quiz-header">
+        <section class="high-score"><a href='#'>View High Scores</a></section>
+        <section class="timer">Testing... 1, 2, 3? </section>
+    </header> 
+    <main>
+        <section class="start-quiz">
+            <h1 class="quiz-head">Coding Quiz Challenge</h1>
+            <p class="quiz-instructions">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will decrease your score/time by ten seconds!</p>
+            <section class="start-button">
+                <!-- The generate element is referenced in the javascript and it has an event listener that triggers when the generate button is clicked. -->
+                <button id="generate" class="btn">Start Quiz</button>
+            </section>
+        </section>
+    </main>   
     <script src="assets/js/script.js"></script>
 </body>
 </html>
