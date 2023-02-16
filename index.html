@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="code-quiz-header">
-        <section class="high-score"><a href='#'>View High Scores</a></section>
+        <section class="view-high-score"><a href='#'>View High Scores</a></section>
         <section class="timer">Testing... 1, 2, 3? </section>
     </header> 
     <main>
@@ -40,8 +40,19 @@
             <form id="initial-form" method="POST">
                 <label for="initial-text">Record Your Score: </label>
                 <input type="text" placeholder="Enter Your Initials!" name="initial-text" id="initial-text" />
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" class="btn">
             </form>
+        </section>
+
+        <section class="high-score">
+            <p id="high-scores">High Scores</p>
+            <p id="high-scores-initials">Insert high scores from Local Storage!</p>
+            <button class="btn" id="go-back-button" onclick="window.location.href='index.html';">
+                Go Back
+            </button>
+            <button class="btn" id="clear-high-scores" onclick="window.location.href='#';">
+                Clear High Scores
+            </button>
         </section>
 
     </main>   
