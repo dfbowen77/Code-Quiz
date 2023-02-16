@@ -52,3 +52,16 @@
     text-align: center;
     cursor: pointer;
   }
+
+  #question-id {
+    background-color: lightskyblue;
+    font-size: 32px;
+    font-weight: bolder;
+  }
+
+  #distractors {
+    font-size: 20px;
+    color: white;
+    background-color: purple;
+    padding: 20px;
+  }
