@@ -41,6 +41,16 @@ var questions =
 
       ];
 
+      
+console.log(questions[0].distractors[0])
+
+document.getElementById("question-id").innerHTML = questions[0].question_id + '.  ' + questions[0].prompt
+document.getElementById("distractor-1").innerHTML = 'A. ' + questions[0].distractors[0]
+document.getElementById("distractor-2").innerHTML = 'B. ' + questions[0].distractors[1]
+document.getElementById("distractor-3").innerHTML = 'C. ' + questions[0].distractors[2]
+document.getElementById("distractor-4").innerHTML = 'D. ' + questions[0].distractors[3]
+
+console.log(questions[0])
 console.log(timerEl)
 function timer() {
     var timeLeft = 100;
@@ -61,3 +71,5 @@ function timer() {
 }
 
 timer()
+
+
