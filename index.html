@@ -22,6 +22,7 @@
                 <button id="generate" class="btn">Start Quiz</button>
             </section>
         </section>
+
         <section class="quiz">
             <p id="question-id"></p>
             <ul id="distractors">
@@ -32,6 +33,17 @@
             </ul>
 
         </section>
+
+        <section class="score">
+            <p id="all-done">All Done!!!</p>
+            <p id="final-score"></p>
+            <form id="initial-form" method="POST">
+                <label for="initial-text">Record Your Score: </label>
+                <input type="text" placeholder="Enter Your Initials!" name="initial-text" id="initial-text" />
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
     </main>   
     <script src="assets/js/script.js"></script>
 </body>

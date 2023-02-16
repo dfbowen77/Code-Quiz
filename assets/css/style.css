@@ -65,3 +65,15 @@
     background-color: purple;
     padding: 20px;
   }
+
+  #all-done {
+    background-color: lightskyblue;
+    font-size: 32px;
+    font-weight: bolder;
+    padding: 20px;
+  }
+
+  #initial-form {
+    background-color: lightskyblue;
+    font-size: 24px;
+  }
