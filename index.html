@@ -11,7 +11,7 @@
 <body>
     <header class="code-quiz-header">
         <section class="view-high-score"><a href='#'>View High Scores</a></section>
-        <section class="timer">Testing... 1, 2, 3? </section>
+        <section class="timer">Time: 100 </section>
     </header> 
     <main>
         <section class="start-quiz">
@@ -19,17 +19,17 @@
             <p class="quiz-instructions">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will decrease your score/time by ten seconds!</p>
             <section class="start-button">
                 <!-- The generate element is referenced in the javascript and it has an event listener that triggers when the generate button is clicked. -->
-                <button id="generate" class="btn">Start Quiz</button>
+                <button id="gameStart" class="btn">Start Quiz</button>
             </section>
         </section>
 
         <section class="quiz">
             <p id="question-id"></p>
             <ul id="distractors">
-                <li id="distractor-1"></li>
-                <li id="distractor-2"></li>
-                <li id="distractor-3"></li>
-                <li id="distractor-4"></li>
+                <li id="distractor-1"><button id="distractor-1-btn" class="btn"></button></li>
+                <li id="distractor-2"><button id="distractor-2-btn" class="btn"></button></li>
+                <li id="distractor-3"><button id="distractor-3-btn" class="btn"></button></li>
+                <li id="distractor-4"><button id="distractor-4-btn" class="btn"></button></li>
             </ul>
 
         </section>
