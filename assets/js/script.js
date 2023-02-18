@@ -1,4 +1,6 @@
 var timerEl = document.querySelector('.timer')
+var startQuizEl = document.querySelector('.start-quiz')
+var quizEl = document.querySelector('.quiz')
 
 // questions were copied from the following website: https://www.interviewbit.com/javascript-mcq/
 var questions =
@@ -43,17 +45,20 @@ var questions =
 
       
 console.log(questions[0].distractors[0])
+console.log(questions.length)
 
 document.getElementById("question-id").innerHTML = questions[0].question_id + '.  ' + questions[0].prompt
-document.getElementById("distractor-1").innerHTML = 'A. ' + questions[0].distractors[0]
-document.getElementById("distractor-2").innerHTML = 'B. ' + questions[0].distractors[1]
-document.getElementById("distractor-3").innerHTML = 'C. ' + questions[0].distractors[2]
-document.getElementById("distractor-4").innerHTML = 'D. ' + questions[0].distractors[3]
+document.getElementById("distractor-1-btn").innerHTML = 'A. ' + questions[0].distractors[0]
+document.getElementById("distractor-2-btn").innerHTML = 'B. ' + questions[0].distractors[1]
+document.getElementById("distractor-3-btn").innerHTML = 'C. ' + questions[0].distractors[2]
+document.getElementById("distractor-4-btn").innerHTML = 'D. ' + questions[0].distractors[3]
 
 console.log(questions[0])
 console.log(timerEl)
-function timer() {
+document.getElementById("gameStart").addEventListener("click", function(){
     var timeLeft = 100;
+    startQuizEl.setAttribute("style", "visibility: hidden; width: 0; height: 0")
+    quizEl.setAttribute("style", "visibility: visible; width: 100%; height: 100%")
 
     var timeDecrease = setInterval(function() {
         if (timeLeft > 0) {
@@ -65,11 +70,10 @@ function timer() {
         } else {
             clearInterval(timeDecrease)
             console.log(timeLeft)
-            timeLeft.textContent = 'Game Over!';
+            timerEl.textContent = 'Game Over!';
         }
     }, 1000)
+
 }
 
-timer()
-
-
+)

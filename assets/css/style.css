@@ -1,3 +1,7 @@
+* {
+    background-color: lightskyblue;
+}
+
 .code-quiz-header {
     width: 100%;
     background-color: lightskyblue;
@@ -54,16 +58,18 @@
   }
 
   .quiz {
-    width: 100%;
+    width: 0%;
+    height: 0%;
     background-color: lightskyblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    visibility: hidden;
   }
 
   #question-id {
-    background-color: lightskyblue;
+    color: white;
     font-size: 32px;
     font-weight: bolder;
   }
@@ -76,12 +82,14 @@
   }
 
   .score {
-    width: 100%;
+    width: 0%;
+    height: 0%;
     background-color: lightskyblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    visibility: hidden;
   }
 
   #all-done {
@@ -101,10 +109,12 @@
     font-size: 32px;
     font-weight: bolder;
     padding: 20px;
-    width: 100%;
+    width: 0%;
+    height: 0%;
     background-color: lightskyblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    visibility: hidden;
   }
