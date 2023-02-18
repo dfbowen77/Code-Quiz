@@ -43,19 +43,18 @@ var questions =
 
       ];
 
-      
-console.log(questions[0].distractors[0])
-console.log(questions.length)
+var questionIndex = 0; 
 
-document.getElementById("question-id").innerHTML = questions[0].question_id + '.  ' + questions[0].prompt
-document.getElementById("distractor-1-btn").innerHTML = 'A. ' + questions[0].distractors[0]
-document.getElementById("distractor-2-btn").innerHTML = 'B. ' + questions[0].distractors[1]
-document.getElementById("distractor-3-btn").innerHTML = 'C. ' + questions[0].distractors[2]
-document.getElementById("distractor-4-btn").innerHTML = 'D. ' + questions[0].distractors[3]
+function DisplayQuestion() {
+    document.getElementById("question-id").innerHTML = questions[questionIndex].question_id + '.  ' + questions[questionIndex].prompt
+    document.getElementById("distractor-1-btn").innerHTML = 'A. ' + questions[questionIndex].distractors[0]
+    document.getElementById("distractor-2-btn").innerHTML = 'B. ' + questions[questionIndex].distractors[1]
+    document.getElementById("distractor-3-btn").innerHTML = 'C. ' + questions[questionIndex].distractors[2]
+    document.getElementById("distractor-4-btn").innerHTML = 'D. ' + questions[questionIndex].distractors[3]
+}
 
-console.log(questions[0])
-console.log(timerEl)
 document.getElementById("gameStart").addEventListener("click", function(){
+    DisplayQuestion()
     var timeLeft = 100;
     startQuizEl.setAttribute("style", "visibility: hidden; width: 0; height: 0")
     quizEl.setAttribute("style", "visibility: visible; width: 100%; height: 100%")
@@ -72,7 +71,75 @@ document.getElementById("gameStart").addEventListener("click", function(){
             console.log(timeLeft)
             timerEl.textContent = 'Game Over!';
         }
+
     }, 1000)
+
+    document.getElementById("distractor-1-btn").addEventListener("click", function(){
+        var answer = 0;
+        if (answer === questions[questionIndex].key) {
+            console.log("Correct!")
+            questionIndex += 1;
+            console.log(questionIndex)
+            return DisplayQuestion()
+
+        }
+        if (answer != questions[questionIndex].key) {
+            console.log("WRONG!")
+            timeLeft-=10;
+        }
+        
+        }
+    )
+
+    document.getElementById("distractor-2-btn").addEventListener("click", function(){
+        var answer = 1;
+        if (answer === questions[questionIndex].key) {
+            console.log("Correct!")
+            questionIndex += 1;
+            console.log(questionIndex)
+            return DisplayQuestion()
+        }
+        if (answer != questions[questionIndex].key) {
+            console.log("WRONG!")
+            timeLeft-=10;
+        }
+        
+        }
+    )
+
+    document.getElementById("distractor-3-btn").addEventListener("click", function(){
+        var answer = 2;
+        if (answer === questions[questionIndex].key) {
+            console.log("Correct!")
+            questionIndex += 1;
+            console.log(questionIndex)
+            return DisplayQuestion()
+        }
+        if (answer != questions[questionIndex].key) {
+            console.log("WRONG!")
+            timeLeft-=10;
+        }
+        
+        }
+    )
+
+    document.getElementById("distractor-4-btn").addEventListener("click", function(){
+        var answer = 3;
+        if (answer === questions[questionIndex].key) {
+            console.log("Correct!")
+            questionIndex += 1;
+            console.log(questionIndex)
+            return DisplayQuestion()
+        }
+        if (answer != questions[questionIndex].key) {
+            console.log("WRONG!")
+            timeLeft-=10;
+        }
+        
+        }
+    )
+
+
 
 }
 
