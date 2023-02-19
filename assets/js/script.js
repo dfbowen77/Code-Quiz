@@ -1,6 +1,12 @@
 var timerEl = document.querySelector('.timer')
 var startQuizEl = document.querySelector('.start-quiz')
 var quizEl = document.querySelector('.quiz')
+var scoreEl = document.querySelector('.score')
+var highScoreEl = document.querySelector('.high-score')
+var initialTextEl = document.querySelector("#initial-text");
+var scoreButtonEl = document.querySelector("#submit-initials")
+
+console.log(highScoreEl)
 
 // questions were copied from the following website: https://www.interviewbit.com/javascript-mcq/
 var questions =
@@ -80,7 +86,13 @@ document.getElementById("gameStart").addEventListener("click", function(){
             console.log("Correct!")
             questionIndex += 1;
             console.log(questionIndex)
-            return DisplayQuestion()
+            if (questionIndex < 5) {
+                return DisplayQuestion()
+            } else {
+                var quizScore = timeLeft;
+                localStorage.setItem("score", quizScore)
+                return LogScore()
+            }
 
         }
         if (answer != questions[questionIndex].key) {
@@ -97,7 +109,13 @@ document.getElementById("gameStart").addEventListener("click", function(){
             console.log("Correct!")
             questionIndex += 1;
             console.log(questionIndex)
-            return DisplayQuestion()
+            if (questionIndex < 5) {
+                return DisplayQuestion()
+            } else {
+                var quizScore = timeLeft;
+                localStorage.setItem("score", quizScore)
+                return LogScore()
+            }
         }
         if (answer != questions[questionIndex].key) {
             console.log("WRONG!")
@@ -113,7 +131,14 @@ document.getElementById("gameStart").addEventListener("click", function(){
             console.log("Correct!")
             questionIndex += 1;
             console.log(questionIndex)
-            return DisplayQuestion()
+            if (questionIndex < 5) {
+                return DisplayQuestion()
+            } else {
+                var quizScore = timeLeft;
+                localStorage.setItem("score", quizScore)
+                return LogScore()
+            }
+
         }
         if (answer != questions[questionIndex].key) {
             console.log("WRONG!")
@@ -129,7 +154,13 @@ document.getElementById("gameStart").addEventListener("click", function(){
             console.log("Correct!")
             questionIndex += 1;
             console.log(questionIndex)
-            return DisplayQuestion()
+            if (questionIndex < 5) {
+                return DisplayQuestion()
+            } else {
+                var quizScore = timeLeft;
+                localStorage.setItem("score", quizScore)
+                return LogScore()
+            }
         }
         if (answer != questions[questionIndex].key) {
             console.log("WRONG!")
@@ -144,3 +175,25 @@ document.getElementById("gameStart").addEventListener("click", function(){
 }
 
 )
+
+function LogScore() {
+    quizEl.setAttribute("style", "visibility: hidden; width: 0%; height: 0%")
+    scoreEl.setAttribute("style", "visibility: visible; width: 100%; height: 100%")
+    scoreButtonEl.addEventListener("click", function(event){
+        event.preventDefault;
+        var initials = initialTextEl.value;
+        console.log(initials)        
+        localStorage.setItem("initials", initials)
+        } 
+        
+    )   
+    
+}
+
+function highScores() {
+    scoreEl.setAttribute("style", "visibility: hidden; width: 0%; height: 0%")
+    highScoreEl.setAttribute("style", "visibility: visible; width: 100%; height: 100%")
+}
+
+
+
