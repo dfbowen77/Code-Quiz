@@ -1,7 +1,8 @@
+/* sets the page background color to lightskyblue */
 * {
     background-color: lightskyblue;
 }
-
+/* sets the styles for the code-quiz-header class */
 .code-quiz-header {
     width: 100%;
     background-color: lightskyblue;
@@ -14,6 +15,7 @@
     align-items: center;
 }
 
+/* sets the styles for the start-quiz class */
 .start-quiz {
     width: 100%;
     background-color: lightskyblue;
@@ -23,6 +25,7 @@
     flex-direction: column;
 }
 
+/* sets the styles for the quiz-head class */
 .quiz-head {
     font-size: 48px;
     font-weight: bolder;
@@ -33,6 +36,7 @@
 
 }
 
+/* sets the styles for the quiz-instructions class */
 .quiz-instructions {
     font-size: 24px;
     padding-top: 40px;
@@ -41,6 +45,7 @@
     padding-left: 200px;
 }
 
+/* sets the styles for the btn class */
 .btn {
     border: none;
     background-color: purple;
@@ -57,6 +62,7 @@
     cursor: pointer;
   }
 
+  /* sets the styles for the quiz class */
   .quiz {
     width: 0%;
     height: 0%;
@@ -69,19 +75,23 @@
     margin: 0%;
   }
 
+  /* sets the styles for the question-id ID */
   #question-id {
     color: white;
     font-size: 32px;
     font-weight: bolder;
   }
 
+    /* sets the styles for the distractors ID */
   #distractors {
     font-size: 20px;
     color: white;
     background-color: purple;
-    padding: 20px;
+    padding: 0px;
+    margin: 35px;
   }
 
+      /* sets the styles for the score class */
   .score {
     width: 0%;
     height: 0%;
@@ -93,6 +103,7 @@
     visibility: hidden;
   }
 
+  /* sets the styles for the all-done ID */
   #all-done {
     background-color: lightskyblue;
     font-size: 32px;
@@ -100,11 +111,13 @@
     padding: 20px;
   }
 
+  /* sets the styles for the initial-form ID */
   #initial-form {
     background-color: lightskyblue;
     font-size: 24px;
   }
 
+  /* sets the styles for the high-score class */
   .high-score {
     background-color: lightskyblue;
     font-size: 32px;
@@ -118,4 +131,18 @@
     align-items: center;
     flex-direction: column;
     visibility: hidden;
+  }
+  /* sets the styles for the right-or-wrong ID */
+  #right-or-wrong {
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 20px;
+  }
+  /* sets the styles for the high-score-table ID */
+  #high-score-table {
+    background-color: crimson;
+    border: 1px solid;
+    margin: 20px;
+    width: 50%;
+    text-align: center;
   }

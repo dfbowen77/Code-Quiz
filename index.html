@@ -10,10 +10,13 @@
 </head>
 <body>
     <header class="code-quiz-header">
-        <section class="view-high-score"><a href='#'>View High Scores</a></section>
+        <!-- link to high score table -->
+        <section class="view-high-score"><a href='#high-scores'>View High Scores</a></section>
+        <!-- Timer, including initial time available -->
         <section class="timer">Time: 100 </section>
     </header> 
     <main>
+        <!-- The initial page where the quiz can be started -->
         <section class="start-quiz">
             <h1 class="quiz-head">Coding Quiz Challenge</h1>
             <p class="quiz-instructions">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will decrease your score/time by ten seconds!</p>
@@ -22,7 +25,7 @@
                 <button id="gameStart" class="btn">Start Quiz</button>
             </section>
         </section>
-
+        <!-- The section where the quiz get displayed, including the distractors. -->
         <section class="quiz">
             <p id="question-id"></p>
             <ul id="distractors">
@@ -31,31 +34,38 @@
                 <li id="distractor-3"><button id="distractor-3-btn" class="btn"></button></li>
                 <li id="distractor-4"><button id="distractor-4-btn" class="btn"></button></li>
             </ul>
+            <!-- Tell test takers via javascript whether they got the item right or wrong -->
+            <p id="right-or-wrong"></p>
 
         </section>
-
+        <!-- Quiz complete view, including giving test takers their score and capturing their initials -->
         <section class="score">
             <p id="all-done">All Done!!!</p>
             <p id="final-score"></p>
-            <form id="initial-form" method="POST">
+            <form id="initial-form" method="POST" onsubmit=event.preventDefault()>
                 <label for="initial-text">Record Your Score: </label>
                 <input type="text" placeholder="Enter Your Initials!" name="initial-text" id="initial-text" />
                 <input id="submit-initials" type="submit" value="Submit" class="btn">
             </form>
         </section>
-
+        <!-- High score table view, including a sorted table of scores, a return button, and a button for clearing the high scores -->
         <section class="high-score">
             <p id="high-scores">High Scores</p>
-            <p id="high-scores-initials">Insert high scores from Local Storage!</p>
+            <table id="high-score-table">
+                <th class="hs-table-header">Rank</th>
+                <th class="hs-table-header">Initials</th>
+                <th class="hs-table-header">Score</th>
+            </table>
             <button class="btn" id="go-back-button" onclick="window.location.href='index.html';">
                 Go Back
             </button>
-            <button class="btn" id="clear-high-scores" onclick="window.location.href='#';">
+            <button class="btn" id="clear-high-scores" onclick="window.location.href='index.html';">
                 Clear High Scores
             </button>
         </section>
 
-    </main>   
+    </main>  
+     <!--The source of the javascript file that makes this page interactive.  -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
